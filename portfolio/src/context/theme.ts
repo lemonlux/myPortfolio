@@ -23,6 +23,7 @@ const PALETTE_COLOR_DARK = {
   border:  "#2f2e33",
 };
 
+
 export const theme = {
   palette: {
     background: {
@@ -46,15 +47,6 @@ export const theme = {
     mobile: `@media (max-width: ${BREAKPOINTS.tablet}px)`,
     tablet: `@media (min-width: ${BREAKPOINTS.tablet}px) and (max-width: ${BREAKPOINTS.desktop}px)`,
     desktop: `@media (min-width: ${BREAKPOINTS.desktop}px)`,
-  },
-  typography: {
-    fonts: {
-      bold: "/assets/fonts/Subjectivity-Bold.otf",
-      thin: "/assets/fonts/Subjectivity-Thin.otf",
-      regular: "/assets/fonts/Subjectivity-Regular.otf",
-      semibold: "/assets/fonts/Subjectivity-Medium.otf",
-      black: "/assets/fonts/Subjectivity-Black.otf",
-    },
   },
   spacing,
 };

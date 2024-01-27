@@ -1,19 +1,21 @@
 import createGlobalStyle from "@emotion/styled";
-import { theme } from "../context/theme";
 
+interface GlobalStylesProps{
+props: string,
+}
 
-const GlobalStyles = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
 
 
         *{
            box-sizing: "border-box";
-           color:  ${({theme})=>theme.palette.color.main};
+           color:  "${props => props.theme.palette.color.main}";
          }
          html, body {
            height: "100vh";
            font-family: 'Onest';
            width: "100vw";
-           background: ${({theme})=>theme.palette.background.main};
+           background: "${props=> props.theme.palette.background.main}";
            padding: 0;
            margin: 0;
          }
@@ -21,18 +23,8 @@ const GlobalStyles = createGlobalStyle`
            font-weight: 300;
          }
           span{
-           color: ${({theme})=>theme.palette.color.enhance};
+           color: "${props=> props.theme.palette.color.enhance}";
            font-weight: 600;
-         };
-
-         ::-webkit-scrollbar {
-           width:  ${({theme})=>theme.spacing(0.75)};
-           background: ${({theme})=> theme.palette.background.main};
-         };
-         ::-webkit-scrollbar-thumb {
-           width: ${({theme})=> theme.spacing(0.75)};
-           background: ${({theme})=> theme.palette.background.main};
-           border-radius:  ${({theme})=>theme.spacing(0.5)};
          };
          a: {
            color: "inherit";
